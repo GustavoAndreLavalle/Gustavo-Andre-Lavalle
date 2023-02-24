@@ -12,7 +12,7 @@ Clonar el repositorio
   cd Gustavo-Andre-Lavalle
   python manage.py runserver
 Prerequisitos
-Python 3.7, Django, (Recomendado correr en entorno virtual)
+Python 3.7, Django
 
 Autor
 Gustavo Andre Lavalle
