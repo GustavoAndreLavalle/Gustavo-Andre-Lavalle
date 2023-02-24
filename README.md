@@ -1,5 +1,5 @@
 Entrega Final - Web Cursos
-Entrega final de proyecto de alumnos del curso de Python, dictado por CoderHouse. Profesor Juan Carlos Paredes, Comisión #34660
+Entrega final de proyecto del curso de Python, dictado por CoderHouse. Profesor Juan Carlos Paredes, Comisión #34660
 
 Funcionalidades
 Login, registro y usuarios
