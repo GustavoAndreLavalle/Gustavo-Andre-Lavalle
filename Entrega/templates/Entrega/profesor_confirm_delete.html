@@ -1,0 +1,15 @@
+{% extends "Entrega/padre.html "%}
+
+{% block titulo %}
+Bienvenido!
+{% endblock %}
+
+{% block formulario %}
+<form action="" method="POST"> {% csrf_token %}
+    
+    Esta seguro que desea borrar el Profesor "{{object.nombre}}" ?
+
+    <input type = "submit" value="Enviar">
+</form>
+
+{% endblock %}

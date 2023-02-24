@@ -1,0 +1,43 @@
+{% extends "Entrega/padre.html "%}
+
+{% block titulo %}
+Estudiantes!
+{% endblock %}
+
+{% block formulario %}
+
+<button>
+    <a href="{% url 'Crear Estudiantes' %}">Crear Estudiante</a>
+</button>
+<table class="table">
+    
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Fecha Nacimiento</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for est in estudiantes %}
+
+        <tr>
+            <th scope="row">{{est.id}}</th>
+            <td>{{est.nombre}}</td>
+            <td>{{est.apellido}}</td>
+            <td>{{est.fechaNacimiento}}</td>
+            <td>
+                <button>
+                    <a href="{% url 'Editar Estudiante' est.nombre %}">Editar Estudiante</a>
+                </button>
+                <button>
+                    <a href="{% url 'Borrar Estudiante' est.nombre %}">Borrar Estudiante</a>
+                </button>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock %}

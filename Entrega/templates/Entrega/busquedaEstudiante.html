@@ -1,0 +1,18 @@
+{% extends "Entrega/padre.html "%}
+
+{% block titulo %}
+BUSCAR!
+{% endblock %}
+
+{% block formulario %}
+
+<form action="/Entrega/resultadoEstudiante/" method="GET">
+    Nombre:<input type="text" name="nombre">
+    <input type="submit" name="buscar">
+
+</form>
+
+
+
+{% endblock %}
+    

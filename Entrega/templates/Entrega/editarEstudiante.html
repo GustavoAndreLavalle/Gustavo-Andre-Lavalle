@@ -1,0 +1,14 @@
+{% extends "Entrega/padre.html "%}
+
+{% block titulo %}
+Bienvenido!
+{% endblock %}
+
+{% block formulario %}
+<form action="" method="POST"> {% csrf_token %}
+    {{formulario1.as_p}}
+
+    <input type = "submit" value="Enviar">
+</form>
+
+{% endblock %}

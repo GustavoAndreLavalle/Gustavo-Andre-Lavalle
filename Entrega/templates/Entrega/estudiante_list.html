@@ -1,0 +1,54 @@
+{% extends "Entrega/padre.html "%}
+
+{% block titulo %}
+Estudiantes!
+{% endblock %}
+
+{% block formulario %}
+
+{% if request.user.is_authenticated %}
+<button>
+    <a href="{% url 'crear estudiantes' %}">Crear Estudiante</a>
+</button>
+<button>
+    <a href="{% url 'Buscar Estudiante' %}">Buscar Estudiante</a>
+</button>
+{% endif %}
+<table class="table">
+
+    
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">FechaNacimiento</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for est in object_list %}
+        
+
+        <tr>
+            <th scope="row">{{cur.id}}</th>
+            <td>{{est.nombre}}</td>
+            <td>{{est.apellido}}</td>
+            <td>{{est.fechaNacimiento}}</td>
+            <td>
+                {% if request.user.is_authenticated %}
+                <button>
+                    <a href="{% url 'editar estudiantes' est.id %}">Editar Estudiante</a>
+                </button>
+                <button>
+                    <a href="{% url 'borrar estudiantes' est.id %}">Borrar Estudiante</a>
+                </button>
+                {% endif %}
+            </td>
+        </tr>
+        
+        {% endfor %}
+    </tbody>
+  </table>
+
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "Entrega/padre.html "%}
+
+{% block titulo %}
+BUSCAR!
+{% endblock %}
+
+{% block formulario %}
+
+<form action="/Entrega/resultadoCurso/" method="GET">
+    Camada:<input type="number" name="camada">
+    <input type="submit" name="buscar">
+
+</form>
+
+
+
+{% endblock %}
+    

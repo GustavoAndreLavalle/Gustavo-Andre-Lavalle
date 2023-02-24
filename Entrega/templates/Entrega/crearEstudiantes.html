@@ -1,0 +1,17 @@
+{% extends "Entrega/padre.html "%}
+
+{% block titulo %}
+Bienvenido!
+{% endblock %}
+
+{% block formulario %}
+<form action="/Entrega/crear_estudiantes/"    method="POST"> {% csrf_token %}
+    <p> Nombre: <input type = "text" name="nombre"> </p>
+    <p> Apellido: <input type = "text" name="apellido"> </p>
+    <p> FechaNac: <input type = "date" name="fechaNacimiento"> </p>
+    <input type = "submit" value="Enviar">
+ </form> 
+
+{% endblock %}
+
+    

@@ -1,0 +1,10 @@
+{% extends "Entrega/padre.html "%}
+
+{% block titulo %}
+{% if request.user.is_authenticated %}
+Bienvenido!
+{{mensaje}}
+{% else %}
+Bienvenido!
+{% endif %}
+{% endblock %}

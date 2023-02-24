@@ -1,0 +1,28 @@
+
+{% extends "Entrega/padre.html "%}
+
+{% block titulo %}
+Entregables!
+{% endblock %}
+
+{% block formulario %}
+
+<p>{{fecha}}</p>
+<table class="table">
+    <tbody>
+
+    {% for x in resultado %}
+    <tr>
+    
+        <td>{{x.nombre}}</td>
+    
+    </tr>
+
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
+
+
+    

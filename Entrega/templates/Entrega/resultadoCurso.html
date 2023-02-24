@@ -1,0 +1,27 @@
+
+{% extends "Entrega/padre.html "%}
+
+{% block titulo %}
+Cursos!
+{% endblock %}
+
+{% block formulario %}
+
+<p>{{camada}}</p>
+
+<table class="table">
+<tbody>
+    {% for x in resultado %}
+    <tr>
+        <td>{{x.nombre}}</td> 
+        <td>{{x.comision}}</td>
+    </tr>
+
+    {% endfor %}
+</tbody>
+</table>
+{% endblock %}
+
+
+    
+

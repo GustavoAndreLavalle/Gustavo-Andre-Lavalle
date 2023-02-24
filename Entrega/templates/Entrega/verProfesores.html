@@ -1,0 +1,47 @@
+{% extends "Entrega/padre.html "%}
+
+{% block titulo %}
+Profesores!
+{% endblock %}
+
+{% block formulario %}
+
+<button>
+    <a href="{% url 'Crear Profesores' %}">Crear Profesor</a>
+</button>
+<table class="table">
+    
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Email</th>
+        <th scope="col">Profesion</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for pro in profesores %}
+
+        <tr>
+            <th scope="row">{{pro.id}}</th>
+            <td>{{pro.nombre}}</td>
+            <td>{{pro.apellido}}</td>
+            <td>{{pro.email}}</td>
+            <td>{{pro.profesion}}</td>
+            <td>
+                <button>
+                    <a href="{% url 'Editar Profesor' pro.nombre %}">Editar Profesor</a>
+                </button>
+                <button>
+                    <a href="{% url 'Borrar Profesor' pro.nombre %}">Borrar Profesor</a>
+                </button>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock %}
+
+

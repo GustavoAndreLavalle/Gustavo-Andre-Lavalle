@@ -1,0 +1,27 @@
+
+{% extends "Entrega/padre.html "%}
+
+{% block titulo %}
+Estudiantes!
+{% endblock %}
+
+{% block formulario %}
+
+<p>{{nombre}}</p>
+<table class="table">
+    <tbody>
+
+    {% for x in resultado %}
+    <tr>
+        <td>{{x.nombre}}</td>
+        <td>{{x.apellido}}</td> 
+        <td>{{x.fechaNacimiento}}</td>
+    
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
+
+    

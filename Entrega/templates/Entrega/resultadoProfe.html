@@ -1,0 +1,26 @@
+
+{% extends "Entrega/padre.html "%}
+
+{% block titulo %}
+Profesores!
+{% endblock %}
+
+{% block formulario %}
+
+<p>{{profesion}}</p>
+<table class="table">
+    <tbody>
+
+    {% for x in resultado %}
+    <tr>
+        <td>{{x.nombre}}</td>
+        <td>{{x.apellido}}</td>
+        <td>{{x.email}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table> 
+{% endblock %}
+
+       
+

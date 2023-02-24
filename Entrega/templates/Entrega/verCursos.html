@@ -1,0 +1,44 @@
+{% extends "Entrega/padre.html "%}
+
+{% block titulo %}
+Cursos!
+{% endblock %}
+
+{% block formulario %}
+
+<button>
+    <a href="{% url 'Crear Cursos' %}">Crear Curso</a>
+</button>
+<table class="table">
+    
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Camada</th>
+        <th scope="col">Comision</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for cur in cursos %}
+
+        <tr>
+            <th scope="row">{{cur.id}}</th>
+            <td>{{cur.nombre}}</td>
+            <td>{{cur.camada}}</td>
+            <td>{{cur.comision}}</td>
+            <td>
+                <button>
+                    <a href="{% url 'Editar Curso' cur.nombre %}">Editar Curso</a>
+                </button>
+                <button>
+                    <a href="{% url 'Borrar Curso' cur.nombre %}">Borrar Curso</a>
+                </button>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "Entrega/padre.html "%}
+
+{% block titulo %}
+Iniciar sesion!
+{% endblock %}
+
+{% block formulario %}
+<form action="" method="POST"> {% csrf_token %}
+    <table>
+    {{formulario1.as_table}}
+    </table>
+
+    <input type = "submit" value="Iniciar Sesion">
+
+</form>
+
+{% endblock %}  

@@ -1,0 +1,16 @@
+{% extends "Entrega/padre.html "%}
+
+{% block titulo %}
+Registro!
+{% endblock %}
+
+{% block formulario %}
+<form action="" method="POST"> {% csrf_token %}
+    <table>
+    {{formulario1.as_table}}
+    </table>
+
+    <input type = "submit" value="Enviar">
+</form>
+
+{% endblock %}  

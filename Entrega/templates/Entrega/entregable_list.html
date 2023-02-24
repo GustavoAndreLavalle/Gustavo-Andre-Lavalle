@@ -1,0 +1,48 @@
+{% extends "Entrega/padre.html "%}
+
+{% block titulo %}
+Entregables!
+{% endblock %}
+
+{% block formulario %}
+
+<button>
+    <a href="{% url 'crear entregables' %}">Crear Entregable</a>
+</button>
+<button>
+    <a href="{% url 'Buscar Entregable' %}">Buscar Entregable</a>
+</button>
+<table class="table">
+    
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Fecha</th>
+        <th scope="col">Entregado</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for ent in object_list %}
+
+        <tr>
+            <th scope="row">{{ent.id}}</th>
+            <td>{{ent.nombre}}</td>
+            <td>{{ent.fecha}}</td>
+            <td>{{ent.entregado}}</td>
+            
+            <td>
+                <button>
+                    <a href="{% url 'editar entregables' ent.id %}">Editar Entregable</a>
+                </button>
+                <button>
+                    <a href="{% url 'borrar entregables' ent.id %}">Borrar Entregable</a>
+                </button>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+
+
+{% endblock %}
